@@ -1,8 +1,9 @@
 XWeibo::Application.routes.draw do
   root "static_pages#home"
-  get "static_pages/help"
-  get "static_pages/home"
-  get "static_pages/about"
+  match '/help', to: "static_pages#help", via: :get
+  match '/about', to: "static_pages#about", via: :get
+  match 'signup', to: "sessions#signup", via: :get
+  match 'signin', to: "sessions#signin", via: :get
   resources :microposts
 
   resources :users
