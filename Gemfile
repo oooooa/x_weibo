@@ -16,6 +16,10 @@ group :development do
   gem 'sqlite3'
 end
 
+group :test, :development do
+  gem 'rspec-rails'
+end
+
 group :production do
   gem 'pg'
   gem 'rails_12factor'
