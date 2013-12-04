@@ -12,12 +12,10 @@ group :doc do
   gem 'sdoc', require: false
 end
 
-group :development do
-  gem 'sqlite3'
-end
-
 group :test, :development do
+  gem 'sqlite3'
   gem 'rspec-rails'
+  gem 'guard-rspec'
 end
 
 group :test do
