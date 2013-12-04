@@ -1,4 +1,6 @@
 XWeibo::Application.routes.draw do
+  root "static_pages#home"
+  get "static_pages/help"
   resources :microposts
 
   resources :users
@@ -43,7 +45,7 @@ XWeibo::Application.routes.draw do
   #       get 'recent', on: :collection
   #     end
   #   end
-  
+
   # Example resource route with concerns:
   #   concern :toggleable do
   #     post 'toggle'
